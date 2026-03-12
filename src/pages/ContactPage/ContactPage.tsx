@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import emailjs from "@emailjs/browser";
 import "./ContactPage.css";
 import { useAuth } from "@/context/AuthContext";
@@ -69,6 +70,16 @@ function ContactPage() {
 
   return (
     <div className="contact-container">
+      <Helmet>
+        <title>Kontakt – Knipetak</title>
+        <meta
+          name="description"
+          content="Ta kontakt med Knipetak for å booke time eller stille spørsmål. Ring, send e-post eller bruk kontaktskjemaet."
+        />
+        <link rel="canonical" href="https://knipetak.no/kontakt" />
+        <meta property="og:url" content="https://knipetak.no/kontakt" />
+        <meta property="og:title" content="Kontakt – Knipetak" />
+      </Helmet>
       <div className="contact-shell">
         <header className="contact-page-header">
           <h1 className="contact-page-title">Kontakt</h1>

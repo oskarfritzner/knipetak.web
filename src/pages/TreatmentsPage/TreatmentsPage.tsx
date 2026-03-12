@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { treatmentData } from "@/data/treatmentData";
 import type { TreatmentType } from "@/interfaces/treatment.interface";
@@ -84,6 +85,16 @@ function TreatmentsPage() {
 
   return (
     <div className="treatments-page">
+      <Helmet>
+        <title>Behandlinger – Knipetak</title>
+        <meta
+          name="description"
+          content="Utforsk Knipetaks behandlingstilbud: massasje på stol eller benk, triggerpunktbehandling, tøyning og mer. Mobil muskelterapi i Bergen."
+        />
+        <link rel="canonical" href="https://knipetak.no/behandlinger" />
+        <meta property="og:url" content="https://knipetak.no/behandlinger" />
+        <meta property="og:title" content="Behandlinger – Knipetak" />
+      </Helmet>
       <section className="treatments__hero">
         <motion.div
           className="treatments__hero-content"

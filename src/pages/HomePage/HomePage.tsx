@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import HeroHomePage from "../../components/HomePageComponents/HeroHomePage/HeroHomePage";
 import InfoComponent from "../../components/HomePageComponents/InfoComponent/InfoComponent";
 import RatingsComponent from "../../components/HomePageComponents/RatingsComponent/RatingsComponent";
@@ -8,6 +9,16 @@ import CTABook from "@/components/HomePageComponents/InfoComponent/CTA-Book/Cta-
 const HomePage: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Knipetak – Muskelterapeut på hjul i Bergen</title>
+        <meta
+          name="description"
+          content="Knipetak er en mobil muskelterapeut i Bergen som kommer til deg – hjemme eller på jobb. Book profesjonell massasje og muskelterapi enkelt online."
+        />
+        <link rel="canonical" href="https://knipetak.no/" />
+        <meta property="og:url" content="https://knipetak.no/" />
+        <meta property="og:title" content="Knipetak – Muskelterapeut på hjul i Bergen" />
+      </Helmet>
       <HeroHomePage />
       <div className="mainContentHomepage">
         <InfoComponent />

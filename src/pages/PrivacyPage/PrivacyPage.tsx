@@ -1,8 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import "./PrivacyPage.css";
 
 function PrivacyPage() {
   return (
     <div className="privacy-page">
+      <Helmet>
+        <title>Personvernerklæring – Knipetak</title>
+        <meta name="description" content="Knipetaks personvernerklæring – hvordan vi samler inn, bruker og beskytter dine personopplysninger i henhold til GDPR." />
+        <link rel="canonical" href="https://knipetak.no/personvern" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="privacy-page__container">
         <h1 className="privacy-page__title">Personvernerklæring</h1>
 

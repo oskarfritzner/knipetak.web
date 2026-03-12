@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block admin and private pages from indexing
+Disallow: /admin-home-page
+Disallow: /admin-calendar-page
+Disallow: /login
+Disallow: /profile
+
+Sitemap: https://knipetak.no/sitemap.xml

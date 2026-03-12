@@ -1,8 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import "./TermsPage.css";
 
 function TermsPage() {
   return (
     <div className="terms-page">
+      <Helmet>
+        <title>Vilkår for bruk – Knipetak</title>
+        <meta name="description" content="Les vilkårene for bruk av Knipetaks bookingplattform og tjenester." />
+        <link rel="canonical" href="https://knipetak.no/terms" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="terms-page__container">
         <h1 className="terms-page__title">Vilkår for bruk</h1>
 
