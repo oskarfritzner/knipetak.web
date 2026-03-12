@@ -1,0 +1,381 @@
+/* Info Component - Minimalistic Design */
+
+.info-page {
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Introduction Section */
+.intro-section {
+  padding: 3rem 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.intro-section::after {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #178192 50%, transparent 100%);
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.intro-text {
+  flex: 1;
+  color: #2a2a2a;
+}
+
+.greeting {
+  color: #178192;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+
+.name-intro {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0 0 1.25rem 0;
+  color: #555;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s ease forwards 0.2s;
+}
+
+.additional-intro {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0;
+  color: #555;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s ease forwards 0.4s;
+}
+
+.intro-image {
+  flex-shrink: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #178192;
+  box-shadow: 0 8px 24px rgba(23, 129, 146, 0.15);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards 0.6s;
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: scale(1.1);
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Benefits Section */
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.benefit-box {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-top: 2px solid #178192;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(23, 129, 146, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.benefit-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(23, 129, 146, 0.15);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  color: #178192;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.benefit-box:hover .benefit-icon {
+  transform: scale(1.1) translateY(-4px);
+}
+
+.benefit-box h3 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.benefit-box p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Full Width Section */
+.full-width-section {
+  background: #ffffff;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.full-width-section .content-wrapper {
+  padding: 0;
+}
+
+.additional-info {
+  color: #2a2a2a;
+  padding: 0;
+}
+
+.additional-info p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #555;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.treatment-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.treatment-type {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-top: 2px solid #178192;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(23, 129, 146, 0.08);
+  transition: all 0.3s ease;
+}
+
+.treatment-type:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(23, 129, 146, 0.15);
+}
+
+.treatment-type h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.treatment-type h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #178192 0%, #126570 100%);
+  border-radius: 2px;
+}
+
+.treatment-type p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* CTA Container */
+.cta-container {
+  margin: 3rem 0 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .benefits-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .intro-section {
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .greeting {
+    font-size: 2.1rem;
+  }
+
+  .name-intro,
+  .additional-intro {
+    font-size: 1.1rem;
+  }
+
+  .intro-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .benefits-container {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-types {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefit-icon {
+    font-size: 2.25rem;
+  }
+
+  .benefit-box {
+    border-top: none;
+    background: #ffffff;
+  }
+
+  .benefit-box h3 {
+    font-size: 1.25rem;
+  }
+
+  .treatment-type {
+    border-top: none;
+    background: #ffffff;
+  }
+
+  .treatment-type h4 {
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .intro-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .greeting {
+    font-size: 1.8rem;
+  }
+
+  .name-intro,
+  .additional-intro {
+    font-size: 1rem;
+  }
+
+  .intro-image {
+    width: 140px;
+    height: 140px;
+    border-width: 2px;
+  }
+
+  .benefit-box {
+    padding: 1.5rem;
+    border-top: none;
+    background: #ffffff;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+  }
+
+  .benefit-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .benefit-box p {
+    font-size: 0.95rem;
+  }
+
+  .treatment-type {
+    padding: 1.5rem;
+    border-top: none;
+    background: #ffffff;
+  }
+
+  .treatment-type h4 {
+    font-size: 1.25rem;
+  }
+
+  .treatment-type p {
+    font-size: 0.95rem;
+  }
+
+  .additional-info p {
+    font-size: 1rem;
+  }
+}
+
+/* Legacy container styles (if needed) */
+.ContainerHomePage,
+.ContainerHomePage2 {
+  display: none;
+}

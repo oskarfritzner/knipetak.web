@@ -1,0 +1,234 @@
+/* Terms Page - Minimalistic Design */
+
+.terms-page {
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.terms-page__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.terms-page__title {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.terms-page__title::after {
+  content: '';
+  display: block;
+  margin: 1.5rem auto 0;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #70bac6 0%, #178192 100%);
+  border-radius: 2px;
+}
+
+.terms-page__intro {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Content Container - Single continuous section */
+.terms-page__content {
+  background: #ffffff;
+  border: 1px solid #e8f5f7;
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(23, 129, 146, 0.06);
+}
+
+.terms-page__section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #f0f5f7;
+}
+
+.terms-page__section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.terms-page__section-title {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.terms-page__section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 3px;
+  height: 1.3rem;
+  background: linear-gradient(180deg, #178192 0%, #70bac6 100%);
+  border-radius: 2px;
+}
+
+.terms-page__text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.terms-page__text:last-child {
+  margin-bottom: 0;
+}
+
+.terms-page__list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.terms-page__list-item {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.terms-page__list-item::marker {
+  color: #178192;
+}
+
+.terms-page__list li {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.terms-page__list li::before {
+  color: #178192;
+}
+
+/* Subsection styling */
+.terms-page__subsection {
+  margin-top: 1.5rem;
+}
+
+.terms-page__subsection-title {
+  color: #2a2a2a;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.terms-page__last-updated {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border: 1px solid #e8f5f7;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terms-page {
+    padding: 3rem 0;
+  }
+
+  .terms-page__container {
+    padding: 0 1.5rem;
+  }
+
+  .terms-page__title {
+    font-size: 2rem;
+  }
+
+  .terms-page__intro {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .terms-page__content {
+    padding: 2rem 1.75rem;
+  }
+
+  .terms-page__section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .terms-page__section-title {
+    font-size: 1.35rem;
+  }
+
+  .terms-page__text {
+    font-size: 0.95rem;
+  }
+
+  .terms-page__list li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-page {
+    padding: 2.5rem 0;
+  }
+
+  .terms-page__container {
+    padding: 0 1rem;
+  }
+
+  .terms-page__title {
+    font-size: 1.75rem;
+  }
+
+  .terms-page__intro {
+    font-size: 0.9rem;
+  }
+
+  .terms-page__content {
+    padding: 1.75rem 1.5rem;
+    border-radius: 10px;
+  }
+
+  .terms-page__section {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .terms-page__section-title {
+    font-size: 1.25rem;
+    padding-left: 0.875rem;
+  }
+
+  .terms-page__section-title::before {
+    width: 2.5px;
+    height: 1.1rem;
+  }
+
+  .terms-page__text {
+    font-size: 0.9rem;
+  }
+
+  .terms-page__list li {
+    font-size: 0.9rem;
+  }
+} 

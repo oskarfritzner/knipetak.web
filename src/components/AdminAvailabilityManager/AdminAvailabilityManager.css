@@ -1,0 +1,139 @@
+.admin-availability-manager {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.1rem;
+}
+
+.availability-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.availability-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.availability-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.section-button:hover {
+  background-color: #e9ecef;
+}
+
+.section-button.active {
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.button-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.button-description {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.expand-icon {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-content {
+  overflow: hidden;
+}
+
+.expanded-section {
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .admin-availability-manager {
+    padding: 1.5rem;
+  }
+
+  .expanded-section {
+    padding: 1.5rem;
+  }
+
+  .section-button {
+    padding: 1.25rem;
+  }
+
+  .availability-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .admin-availability-manager {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .admin-availability-manager {
+    max-width: 1200px;
+  }
+}

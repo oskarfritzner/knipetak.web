@@ -1,0 +1,384 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 77.75vh;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.login-box {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 28rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2b2c2d;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(43, 44, 45, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.login-box form .login-button {
+    color: rgb(236, 235, 235);
+    background-color: #2b2c2d;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.login-box form .login-button:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgb(236, 235, 235);
+    color: #2b2c2d;
+    border: none;
+    outline: none;
+}
+
+.login-box form .login-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box form .login-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8d7da;
+    border-radius: 0.5rem;
+    border: 1px solid #f5c6cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.success-message {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #d4edda;
+    border-radius: 0.5rem;
+    border: 1px solid #c3e6cb;
+}
+
+.toggle-form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form-group input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.google-button {
+    color: rgb(236, 235, 235);
+    background-color: #db4437;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.google-button:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: #c23325;
+    color: rgb(236, 235, 235);
+    border: none;
+    outline: none;
+}
+
+.google-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.google-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password-button {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #2b2c2d;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.toggle-password-button:hover {
+    color: #1a1b1c;
+}
+
+.toggle-password-button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.password-strength-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+.password-strength-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.strength-segment {
+    height: 0.5rem;
+    flex: 1;
+    background-color: #e0e0e0;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+/* Strength colors */
+.strength-0 {
+  background-color: #ff4444;
+}
+.strength-1 {
+  background-color: #ffa700;
+}
+.strength-2 {
+  background-color: #ffdb4a;
+}
+.strength-3 {
+  background-color: #90ee90;
+}
+.strength-4 {
+  background-color: #00c851;
+}
+
+.password-strength-text {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Info button for password requirements */
+.info-button {
+  background: none;
+  border: none;
+  color: #6fb5c0;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #6fb5c0;
+  color: white;
+}
+
+/* Password requirements popup */
+.password-requirements {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0.3125rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.password-requirements h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.password-requirements ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.password-requirements li {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled state improvements */
+.login-button:disabled {
+  background-color: #a7d4db;
+  cursor: not-allowed;
+}
+
+.toggle-password-button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Make password input padding account for the button */
+.password-input-container input {
+    padding-right: 4rem;
+}
+
+.change-button {
+    color: #2b2c2d;
+    background-color: white;
+    border: none;
+    font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-container {
+        padding: 1rem;
+    }
+
+    .login-box {
+        padding: 2rem;
+    }
+
+    .login-box h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-box {
+        padding: 1.5rem;
+    }
+
+    .login-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+}

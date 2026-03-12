@@ -1,0 +1,164 @@
+.qr-code-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.qr-code-modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.close-qrInfo-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+  z-index: 2;
+}
+
+.close-qrInfo-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.close-qrInfo-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-modal-header {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-right: 40px; /* Make room for close button */
+}
+
+.qr-code-modal-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.qr-code-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.payment-info h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.payment-info ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.payment-info ul li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.payment-info ul li:before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+}
+
+.price-disclaimer {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-top: 1rem;
+}
+
+.price-disclaimer p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.price-disclaimer ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.price-disclaimer ul li {
+  padding: 0.25rem 0;
+}
+
+.price-disclaimer ul li:before {
+  content: none;
+}
+
+.qr-code-container {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.qr-code-container h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.qr-code-image {
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .qr-code-modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .qr-code-modal-body {
+    gap: 1.5rem;
+  }
+
+  .qr-code-image {
+    max-width: 200px;
+  }
+}

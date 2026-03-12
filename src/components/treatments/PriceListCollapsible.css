@@ -1,0 +1,243 @@
+/* Price List Collapsible Section */
+
+.price-list-collapsible {
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.price-list-collapsible::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #178192 50%, transparent 100%);
+}
+
+.price-list-collapsible__container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Header */
+.price-list-collapsible__header {
+  text-align: center;
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border: 1px solid #e8f5f7;
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 2px 8px rgba(23, 129, 146, 0.06);
+}
+
+.price-list-collapsible__title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.price-list-collapsible__intro {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Toggle Button - Outlined secondary style */
+.price-list-collapsible__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: #178192;
+  border: 2px solid #178192;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(23, 129, 146, 0.08);
+}
+
+.price-list-collapsible__toggle:hover {
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border-color: #126570;
+  color: #126570;
+  box-shadow: 0 4px 12px rgba(23, 129, 146, 0.15);
+}
+
+.price-list-collapsible__toggle:active {
+  transform: scale(0.98);
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.price-list-collapsible__toggle.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Collapsible Content */
+.price-list-collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.price-list-collapsible__content.open {
+  max-height: 2000px;
+}
+
+.price-list-collapsible__inner {
+  padding-top: 1.5rem;
+}
+
+/* Price Table - Direct connection to intro */
+.price-table {
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border: 1px solid #e8f5f7;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.price-item {
+  display: flex;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid #f0f5f7;
+  gap: 0.75rem;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item:hover {
+  background: linear-gradient(90deg, #f8feff 0%, transparent 100%);
+  margin: 0 -0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 8px;
+}
+
+.price-item__duration {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.price-item__dots {
+  flex: 1;
+  border-bottom: 2px dotted #d5e8eb;
+  margin: 0 0.5rem;
+  min-width: 20px;
+}
+
+.price-item__price {
+  font-size: 1.05rem;
+  color: #178192;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-list-collapsible {
+    padding: 3rem 1.5rem;
+  }
+
+  .price-list-collapsible__header {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .price-list-collapsible__title {
+    font-size: 1.75rem;
+  }
+
+  .price-list-collapsible__intro {
+    font-size: 0.9rem;
+  }
+
+  .price-list-collapsible__toggle {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .price-info {
+    padding: 1.25rem;
+  }
+
+  .price-table {
+    padding: 1.25rem;
+  }
+
+  .price-item {
+    padding: 0.75rem 0;
+  }
+
+  .price-item__duration {
+    font-size: 0.9rem;
+  }
+
+  .price-item__price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-list-collapsible {
+    padding: 2.5rem 1rem;
+  }
+
+  .price-list-collapsible__header {
+    padding: 1.5rem 1.25rem;
+    border-radius: 10px;
+  }
+
+  .price-list-collapsible__title {
+    font-size: 1.6rem;
+  }
+
+  .price-list-collapsible__intro {
+    font-size: 0.875rem;
+  }
+
+  .price-list-collapsible__toggle {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .price-table {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .price-item {
+    padding: 0.75rem 0;
+    flex-wrap: wrap;
+  }
+
+  .price-item__duration {
+    font-size: 0.875rem;
+    flex-basis: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-item__dots {
+    display: none;
+  }
+
+  .price-item__price {
+    font-size: 0.95rem;
+    flex-basis: 100%;
+    text-align: left;
+  }
+}

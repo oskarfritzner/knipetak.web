@@ -1,0 +1,88 @@
+.SlideShowImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  height: auto;
+}
+
+.SequenceContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  border-radius: 8px;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ProgressBarContainer {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ProgressBar {
+  height: 100%;
+  background-color: #ffffff;
+  transition: width 30ms linear;
+  border-radius: 2px;
+}
+
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:focus {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .nav-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .ProgressBarContainer {
+    width: 150px;
+  }
+}

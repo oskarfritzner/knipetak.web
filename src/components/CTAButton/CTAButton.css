@@ -1,0 +1,105 @@
+/* CTA Button - Reusable Component */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Primary Variant (Blue Gradient) */
+.cta-button--primary {
+  background: linear-gradient(135deg, #178192 0%, #126570 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(23, 129, 146, 0.35);
+}
+
+.cta-button--primary:hover {
+  transform: translateY(-2px);
+  margin-top: -2px;
+  margin-bottom: 2px;
+  box-shadow: 0 6px 20px rgba(23, 129, 146, 0.4);
+  background: linear-gradient(135deg, #1a9fb5 0%, #14778a 100%);
+}
+
+.cta-button--primary:active {
+  transform: translateY(0);
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 4px 14px rgba(23, 129, 146, 0.35);
+}
+
+/* Secondary Variant (White/Light) */
+.cta-button--secondary {
+  background: #ffffff;
+  color: #178192;
+  box-shadow: 0 4px 12px rgba(23, 129, 146, 0.15);
+  border: 2px solid #178192;
+}
+
+.cta-button--secondary:hover {
+  transform: translateY(-2px);
+  margin-top: -2px;
+  margin-bottom: 2px;
+  box-shadow: 0 6px 20px rgba(23, 129, 146, 0.25);
+  background: #f8feff;
+  border-color: #1a9fb5;
+  color: #1a9fb5;
+}
+
+.cta-button--secondary:active {
+  transform: translateY(0);
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 4px 12px rgba(23, 129, 146, 0.15);
+}
+
+/* Icon */
+.cta-button__icon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-button__icon {
+  transform: scale(1.1);
+}
+
+/* Text */
+.cta-button__text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .cta-button__icon {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .cta-button__icon {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,268 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: opacity 0.2s ease;
+  position: relative;
+  z-index: 1000;
+  background-color: #178192;
+}
+
+.nav-pending {
+  opacity: 0.7;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.button-logo {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 3rem;
+  width: auto;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Standard links styling */
+.standard-links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Admin links styling */
+.admin-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-link {
+  font-weight: 500 !important;
+}
+
+/* Auth links styling */
+.auth-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* General link styling */
+.navLinks a {
+  text-decoration: none;
+  color: white;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLinks a:hover {
+  color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #e0e0e0;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* Admin link specific hover effect */
+.admin-link::after {
+  background-color: #ffd700 !important;
+}
+
+/* Hamburger button styling */
+.hamburger-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-button span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-button.open span:first-child {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-button.open span:last-child {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.loading-skeleton {
+  height: 24px;
+  width: 500px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+.link-pending {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navBar {
+    padding: 1rem;
+  }
+
+  .hamburger-button {
+    display: flex;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    max-width: 400px;
+    background-color: #178192;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .navLinks.open {
+    right: 0;
+  }
+
+  .standard-links,
+  .admin-links,
+  .auth-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .admin-links,
+  .auth-links {
+    margin: 1.5rem 0 0;
+    padding: 1.5rem 0 0;
+    border-left: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navLinks a {
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  /* Prevent hover effect on mobile */
+  .navLinks a:hover {
+    transform: none;
+  }
+
+  /* Custom scrollbar for the menu */
+  .navLinks::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .navLinks::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .navLinks::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navLinks {
+    gap: 1.5rem;
+  }
+
+  .admin-links,
+  .auth-links {
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .navLinks a {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .logo {
+    display: none;
+  }
+}

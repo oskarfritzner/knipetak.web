@@ -1,0 +1,235 @@
+/* Price List Section */
+
+.price-list {
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.price-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #178192 50%, transparent 100%);
+}
+
+.price-list__container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.price-list__title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.01em;
+}
+
+.price-list__info {
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border: 1px solid #e8f5f7;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(23, 129, 146, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.price-list__info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #178192 0%, #70bac6 100%);
+}
+
+.price-list__info p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 0.75rem 0;
+}
+
+.price-list__info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Price Table - Compact & Rounded */
+.price-list__table {
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border: 1px solid #e8f5f7;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(23, 129, 146, 0.06);
+}
+
+.price-item {
+  display: flex;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid #f0f5f7;
+  gap: 0.75rem;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item:hover {
+  background: linear-gradient(90deg, #f8feff 0%, transparent 100%);
+  margin: 0 -0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 8px;
+}
+
+.price-item__duration {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.price-item__dots {
+  flex: 1;
+  border-bottom: 2px dotted #d5e8eb;
+  margin: 0 0.5rem;
+  min-width: 20px;
+}
+
+.price-item__price {
+  font-size: 1.05rem;
+  color: #178192;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* CTA Section - Compact */
+.price-list__cta {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8feff 0%, #ffffff 100%);
+  border: 1px solid #e8f5f7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 2px 8px rgba(23, 129, 146, 0.06);
+}
+
+.price-list__cta-text {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-list {
+    padding: 3rem 1.5rem;
+  }
+
+  .price-list__title {
+    font-size: 1.75rem;
+  }
+
+  .price-list__info {
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .price-list__info p {
+    font-size: 0.875rem;
+  }
+
+  .price-list__table {
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .price-item {
+    padding: 0.75rem 0;
+  }
+
+  .price-item__duration {
+    font-size: 0.9rem;
+  }
+
+  .price-item__price {
+    font-size: 1rem;
+  }
+
+  .price-list__cta {
+    padding: 1.25rem;
+  }
+
+  .price-list__cta-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-list {
+    padding: 2.5rem 1rem;
+  }
+
+  .price-list__title {
+    font-size: 1.6rem;
+  }
+
+  .price-list__info {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .price-list__info p {
+    font-size: 0.85rem;
+  }
+
+  .price-list__table {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .price-item {
+    padding: 0.75rem 0;
+    flex-wrap: wrap;
+  }
+
+  .price-item__duration {
+    font-size: 0.875rem;
+    flex-basis: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-item__dots {
+    display: none;
+  }
+
+  .price-item__price {
+    font-size: 0.95rem;
+    flex-basis: 100%;
+    text-align: left;
+  }
+
+  .price-list__cta {
+    padding: 1.25rem 1rem;
+    border-radius: 10px;
+  }
+
+  .price-list__cta-text {
+    font-size: 0.875rem;
+  }
+}

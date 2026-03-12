@@ -1,0 +1,1122 @@
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+/* Passer på at skjermen "fill ut" hele siden */
+.main-container {
+  min-height: 77.5vh;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.2rem;
+  max-width: 1200px;
+  margin: 2.2rem auto;
+  padding: 0 1.3rem;
+}
+
+.profile-sidebar {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2.2rem;
+  height: fit-content;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1.3rem;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #178192;
+}
+
+.image-upload-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #178192;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.image-upload-label:hover {
+  transform: scale(1.1);
+}
+
+.image-upload-input {
+  display: none;
+}
+
+.image-upload-icon {
+  color: white;
+  font-size: 1.2rem;
+  height: 85%;
+  width: 100%;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  margin: 0.7rem 0;
+  color: #333;
+}
+
+.profile-email {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.action-button {
+  padding: 0.9rem;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background: #2b2c2d;
+  color: white;
+}
+
+.action-button:hover {
+  background: #585b5d;
+}
+
+.action-button.active {
+  background: #d74444;
+  color: white;
+}
+
+.action-button.active:hover {
+  background: #b71c1c;
+}
+
+.action-button.delete {
+  background: #d74444;
+  color: #ffebee;
+}
+
+.action-button.delete:hover {
+  background: #d65c5c;
+  color: #ffebee;
+}
+
+.action-button.privacy {
+  background: #2c5f2d;
+  color: white;
+}
+
+.action-button.privacy:hover {
+  background: #1e3f1f;
+}
+
+.action-button.logout {
+  background: #01647c;
+  color: #ffffff;
+}
+
+.action-button.save {
+  background: #6fb5c0;
+  color: white;
+  margin-top: 1.1rem;
+}
+
+.action-button.save:hover {
+  background: #14717f;
+}
+
+.action-button.save:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.profile-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2.2rem;
+}
+
+.profile-section {
+  margin-bottom: 2.2rem;
+}
+
+.profile-section h3 {
+  color: #333;
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.info-item {
+  background: #f8f9fa;
+  padding: 1.1rem;
+  border-radius: 9px;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-item label {
+  display: block;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.info-item p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.info-item input,
+.info-item textarea,
+.info-item select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.info-item textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.treatment-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.treatment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem;
+  background: #f8f9fa;
+  border-radius: 9px;
+  transition: transform 0.2s;
+}
+
+.treatment-info h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.treatment-info p {
+  margin: 0.6rem 0 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.treatment-price p {
+  margin: 0;
+  color: #6fb5c0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 1024px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding: 0 1.3rem;
+  }
+
+  .profile-sidebar {
+    margin-bottom: 1.8rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item.full-width {
+    grid-column: auto;
+  }
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.1rem;
+  width: 100%;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.input-with-error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.info-item input.error,
+.info-item textarea.error {
+  border-color: #d32f2f;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.profile {
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  border: solid 1px #ccc;
+}
+
+.profile > div:nth-child(1) {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #ccc;
+}
+
+.profile > div:nth-child(2) {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 1px #ccc;
+}
+
+.profile > div:nth-child(3) {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #ccc;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.profile p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.profile button {
+  padding: 0.5rem 1rem;
+  background-color: #f1356d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.profile button:hover {
+  background-color: #f1356d;
+}
+
+.profile button:active {
+  background-color: #f1356d;
+}
+
+.profile button:focus {
+  outline: none;
+}
+
+.profile button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.profile button:disabled:hover {
+  background-color: #ccc;
+}
+
+.profile button:disabled:active {
+  background-color: #ccc;
+}
+
+.profile button:disabled:focus {
+  outline: none;
+}
+
+.profile input {
+  padding-left: 0.75rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.profileInfo {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .textProfile {
+    font-size: 20px;
+  }
+
+  .save-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .form-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+  }
+
+  .input-with-error {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .error-message {
+    color: #d32f2f;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+
+  .info-item input.error,
+  .info-item textarea.error {
+    border-color: #d32f2f;
+  }
+
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+}
+
+/* GDPR Section Styling */
+.profile-section__title {
+  color: #2c5f2d;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gdpr-back-button {
+  background: #f8f9fa;
+  color: #666;
+  border: 2px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gdpr-back-button:hover {
+  background: #e9ecef;
+  border-color: #bbb;
+}
+
+/* GDPR section integrates with existing profile-section styling */
+
+/* Override data-export and delete-account styles within profile */
+.profile-container .data-export,
+.profile-container .delete-account {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.profile-container .data-export__header h3,
+.profile-container .delete-account__header h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.profile-container .data-export__options {
+  gap: 16px;
+}
+
+.profile-container .data-export__option {
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+.profile-container .delete-account__info,
+.profile-container .delete-account__recommendations {
+  margin-bottom: 16px;
+}
+
+.profile-container .delete-account__actions {
+  text-align: left;
+  border-top: 1px solid #e9ecef;
+  padding-top: 16px;
+}
+
+/* Delete Account Modal */
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.delete-modal-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.delete-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0;
+}
+
+.delete-modal-header h3 {
+  color: #dc3545;
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.delete-modal-close:hover {
+  background: #f8f9fa;
+  color: #dc3545;
+}
+
+.delete-modal-body {
+  padding: 0;
+  max-height: calc(90vh - 80px);
+  overflow-y: auto;
+}
+
+/* Override DeleteAccount styles within modal */
+.delete-modal-body .delete-account {
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.delete-modal-body .delete-account__header h3 {
+  display: none; /* Hide duplicate title */
+}
+
+.delete-modal-body .delete-account__warning {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.delete-modal-body .delete-account__alternatives,
+.delete-modal-body .delete-account__info,
+.delete-modal-body .delete-account__recommendations {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.delete-modal-body .delete-account__contact {
+  background: #e7f3ff;
+  border: 1px solid #b3d7ff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.delete-modal-body .delete-account__actions {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 20px 24px;
+  margin: 0 -24px -24px -24px;
+  border-radius: 0 0 16px 16px;
+}
+
+/* Modal animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile responsiveness for modal */
+@media (max-width: 768px) {
+  .delete-modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .delete-modal-content {
+    max-height: calc(100vh - 80px);
+    border-radius: 12px;
+  }
+
+  .delete-modal-header {
+    padding: 20px 20px 0 20px;
+  }
+
+  .delete-modal-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .delete-modal-body {
+    max-height: calc(100vh - 140px);
+  }
+
+  .delete-modal-body .delete-account {
+    padding: 20px;
+  }
+
+  .delete-modal-body .delete-account__actions {
+    margin: 0 -20px -20px -20px;
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delete-modal-overlay {
+    padding: 5px;
+    padding-top: 20px;
+  }
+
+  .delete-modal-content {
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+  }
+
+  .delete-modal-header {
+    padding: 16px 16px 0 16px;
+  }
+
+  .delete-modal-body .delete-account {
+    padding: 16px;
+  }
+
+  .delete-modal-body .delete-account__actions {
+    margin: 0 -16px -16px -16px;
+    padding: 16px;
+  }
+}
+
+/* Privacy Modal */
+.privacy-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.privacy-modal-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.privacy-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0;
+}
+
+.privacy-modal-header h3 {
+  color: #2c5f2d;
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.privacy-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.privacy-modal-close:hover {
+  background: #f8f9fa;
+  color: #2c5f2d;
+}
+
+.privacy-modal-body {
+  padding: 24px;
+  max-height: calc(90vh - 80px);
+  overflow-y: auto;
+}
+
+.privacy-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.privacy-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.privacy-section h4 {
+  color: #2c5f2d;
+  font-size: 1.1rem;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.privacy-section p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.privacy-section ul {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.privacy-section li {
+  margin-bottom: 8px;
+}
+
+.privacy-section strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.privacy-actions {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+  border: 1px solid #e9ecef;
+}
+
+.privacy-actions p {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.privacy-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.privacy-action-btn {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.privacy-action-btn.primary {
+  background: #2c5f2d;
+  color: white;
+}
+
+.privacy-action-btn.primary:hover {
+  background: #1e3f1f;
+}
+
+.privacy-action-btn.secondary {
+  background: #dc3545;
+  color: white;
+}
+
+.privacy-action-btn.secondary:hover {
+  background: #c82333;
+}
+
+.privacy-action-btn.tertiary {
+  background: #f8f9fa;
+  color: #2c5f2d;
+  border: 2px solid #2c5f2d;
+  grid-column: 1 / -1;
+}
+
+.privacy-action-btn.tertiary:hover {
+  background: #e9ecef;
+  text-decoration: none;
+}
+
+/* Mobile responsiveness for privacy modal */
+@media (max-width: 768px) {
+  .privacy-modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .privacy-modal-content {
+    max-height: calc(100vh - 80px);
+    border-radius: 12px;
+  }
+
+  .privacy-modal-header {
+    padding: 20px 20px 0 20px;
+  }
+
+  .privacy-modal-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .privacy-modal-body {
+    padding: 20px;
+    max-height: calc(100vh - 140px);
+  }
+
+  .privacy-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-action-btn.tertiary {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-modal-overlay {
+    padding: 5px;
+    padding-top: 20px;
+  }
+
+  .privacy-modal-content {
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+  }
+
+  .privacy-modal-header {
+    padding: 16px 16px 0 16px;
+  }
+
+  .privacy-modal-body {
+    padding: 16px;
+  }
+
+  .privacy-actions {
+    padding: 16px;
+  }
+
+  .privacy-section {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+}
+
+/* Data Export Modal */
+.data-export-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.data-export-modal-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.data-export-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0;
+}
+
+.data-export-modal-header h3 {
+  color: #2c5f2d;
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.data-export-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.data-export-modal-close:hover {
+  background: #f8f9fa;
+  color: #2c5f2d;
+}
+
+.data-export-modal-body {
+  padding: 0;
+  max-height: calc(90vh - 80px);
+  overflow-y: auto;
+}
+
+/* Override DataExport styles within modal */
+.data-export-modal-body .data-export {
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.data-export-modal-body .data-export__header h3 {
+  display: none; /* Hide duplicate title */
+}
+
+.data-export-modal-body .data-export__options {
+  gap: 16px;
+}
+
+.data-export-modal-body .data-export__option {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.data-export-modal-body .data-export__option:hover {
+  border-color: #2c5f2d;
+  background: #f0f8f0;
+}
+
+.data-export-modal-body .data-export__info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Mobile responsiveness for data export modal */
+@media (max-width: 768px) {
+  .data-export-modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .data-export-modal-content {
+    max-height: calc(100vh - 80px);
+    border-radius: 12px;
+  }
+
+  .data-export-modal-header {
+    padding: 20px 20px 0 20px;
+  }
+
+  .data-export-modal-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .data-export-modal-body {
+    max-height: calc(100vh - 140px);
+  }
+
+  .data-export-modal-body .data-export {
+    padding: 20px;
+  }
+
+  .data-export-modal-body .data-export__options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-export-modal-overlay {
+    padding: 5px;
+    padding-top: 20px;
+  }
+
+  .data-export-modal-content {
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+  }
+
+  .data-export-modal-header {
+    padding: 16px 16px 0 16px;
+  }
+
+  .data-export-modal-body .data-export {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-container .data-export__options {
+    grid-template-columns: 1fr;
+  }
+}

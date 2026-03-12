@@ -1,0 +1,151 @@
+.data-export {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.data-export__header {
+  margin-bottom: 24px;
+}
+
+.data-export__header h3 {
+  color: #2c5f2d;
+  font-size: 1.25rem;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.data-export__header p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.data-export__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .data-export__options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.data-export__option {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.data-export__option:hover {
+  border-color: #2c5f2d;
+}
+
+.data-export__option h4 {
+  color: #2c5f2d;
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+}
+
+.data-export__option p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 16px 0;
+}
+
+.data-export__btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.data-export__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.data-export__btn--primary {
+  background: #2c5f2d;
+  color: white;
+}
+
+.data-export__btn--primary:hover:not(:disabled) {
+  background: #1e3f1f;
+}
+
+.data-export__btn--secondary {
+  background: #f8f9fa;
+  color: #2c5f2d;
+  border: 2px solid #2c5f2d;
+}
+
+.data-export__btn--secondary:hover:not(:disabled) {
+  background: #e9ecef;
+}
+
+.data-export__success {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  border: 1px solid #c3e6cb;
+}
+
+.data-export__success p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.data-export__info {
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+}
+
+.data-export__info h4 {
+  color: #2c5f2d;
+  font-size: 1rem;
+  margin: 0 0 12px 0;
+}
+
+.data-export__info ul {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+}
+
+.data-export__info li {
+  margin-bottom: 4px;
+}
+
+.data-export__note {
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ffeaa7;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.data-export__note strong {
+  color: #856404;
+}
