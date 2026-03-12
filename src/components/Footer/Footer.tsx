@@ -21,12 +21,12 @@ function Footer() {
         {/* Contact Section */}
         <div className="footer-section">
           <h4>Kontakt Oss</h4>
-          <a href="mailto:helene@knipetak.no" className="footer-link">
+          <p className="footer-link">
             <FontAwesomeIcon icon={faEnvelope} /> helene@knipetak.no
-          </a>
-          <a href="tel:+4747474747" className="footer-link">
+          </p>
+          <p className="footer-link">
             <FontAwesomeIcon icon={faPhone} /> +47 902 75 748
-          </a>
+          </p>
         </div>
 
         {/* Social Media Section */}
