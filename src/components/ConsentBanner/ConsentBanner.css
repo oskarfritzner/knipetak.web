@@ -8,8 +8,8 @@
 }
 
 .consent-banner__overlay {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
+  background: rgba(23, 129, 146, 0.95);
+  backdrop-filter: blur(8px);
   padding: 0;
 }
 
@@ -19,8 +19,8 @@
   padding: 24px;
   max-width: 800px;
   border-radius: 12px 12px 0 0;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-  border-top: 3px solid #2c5f2d;
+  box-shadow: 0 -4px 20px rgba(23, 129, 146, 0.2);
+  border-top: 3px solid #178192;
 }
 
 @media (max-width: 768px) {
@@ -33,7 +33,7 @@
 .consent-banner__title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #2c5f2d;
+  color: #178192;
   margin: 0 0 12px 0;
   display: flex;
   align-items: center;
@@ -72,22 +72,22 @@
 }
 
 .consent-banner__btn--accept {
-  background: #2c5f2d;
+  background: #178192;
   color: white;
 }
 
 .consent-banner__btn--accept:hover {
-  background: #1e3f1f;
+  background: #116a7a;
 }
 
 .consent-banner__btn--necessary {
   background: #f8f9fa;
-  color: #2c5f2d;
-  border: 2px solid #2c5f2d;
+  color: #178192;
+  border: 2px solid #178192;
 }
 
 .consent-banner__btn--necessary:hover {
-  background: #e9ecef;
+  background: #e8f4f6;
 }
 
 .consent-banner__btn--customize {
@@ -112,12 +112,12 @@
 }
 
 .consent-banner__btn--save {
-  background: #2c5f2d;
+  background: #178192;
   color: white;
 }
 
 .consent-banner__btn--save:hover {
-  background: #1e3f1f;
+  background: #116a7a;
 }
 
 .consent-banner__details {
@@ -144,7 +144,7 @@
   width: 18px;
   height: 18px;
   margin: 0;
-  accent-color: #2c5f2d;
+  accent-color: #178192;
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .consent-banner__option strong {
-  color: #2c5f2d;
+  color: #178192;
   display: block;
   margin-bottom: 4px;
 }
@@ -190,7 +190,7 @@
 }
 
 .consent-banner__link {
-  color: #2c5f2d;
+  color: #178192;
   text-decoration: none;
 }
 
